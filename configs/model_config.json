@@ -5,10 +5,11 @@
   "vocab_size": 8000,
   "block_size": 128,
 
-  "n_layers": 4,
-  "n_heads": 4,
-  "embedding_dim": 256,
-  "ffn_multiplier": 4,
+  "num_layers": 4,
+  "num_heads": 4,
+  "embed_dim": 256,
+  "ffn_mult": 4,
+  "max_positions": 1024,
 
   "dropout": 0.1,
   "attention_dropout": 0.1,
@@ -17,7 +18,7 @@
   "use_rmsnorm": true,
   "tie_embeddings": true,
 
-  "lr": 0.0003,
+  "learning_rate": 0.0003,
   "batch_size": 8,
   "epochs": 5,
 
