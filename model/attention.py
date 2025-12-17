@@ -26,8 +26,8 @@ class CausalSelfAttention(nn.Module):
         k = k.view(B, T, self.num_heads, self.head_dim).transpose(1, 2)
         v = v.view(B, T, self.num_heads, self.head_dim).transpose(1, 2)
 
-        q = self.rope.apply(q, T)
-        k = self.rope.apply(k, T)
+        q = self.rope(q)
+        k = self.rope(k)
 
         if past_kv is not None:
             pk, pv = past_kv
